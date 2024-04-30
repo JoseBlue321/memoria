@@ -3,6 +3,7 @@
 use App\Http\Controllers\MemoriaController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ArticuloController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +27,17 @@ Route::middleware('auth')->group(function () {
     Route::get('proyectos/edit/{id}',[ProyectoController::class,'edit'])->name('proyectos.edit');
     Route::put('proyectos/update/{id}',[ProyectoController::class,'update'])->name('proyectos.update');
     Route::delete('proyectos/delete/{id}',[ProyectoController::class,'destroy'])->name('proyectos.destroy');
+
+    #*********************Articulos*****************************
+    Route::get('articulos/index',[ArticuloController::class,'index'])->name('articulo.index');
+    Route::get('articulos/create',[ArticuloController::class,'create'])->name('articulo.create');
+    Route::post('articulos/store',[ArticuloController::class,'store'])->name('articulo.store');
+    Route::get('articulos/show/{id}',[ArticuloController::class,'show'])->name('articulo.show');
+    Route::get('articulos/edit/{id}',[ArticuloController::class,'edit'])->name('articulo.edit');
+    Route::put('articulos/update/{id}',[ArticuloController::class,'update'])->name('articulo.update');
+    Route::delete('articulos/delete/{id}',[ArticuloController::class,'destroy'])->name('articulo.destroy');
+
+
 
 
 

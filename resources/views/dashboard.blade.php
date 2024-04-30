@@ -33,7 +33,7 @@
                                           <p class="card-text">Artículos Científicos</p>
                                         </div>
                                         <div class="card-footer bg-transparent border-light">
-                                            <a name="" id="" class="btn btn-secondary" href="#" role="button">
+                                            <a name="" id="" class="btn btn-secondary" href="{{route('articulo.index')}}" role="button">
                                                 Ingresar
                                             </a>
                                         </div>

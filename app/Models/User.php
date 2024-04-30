@@ -50,5 +50,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Proyecto::class);
     }
+    public function articulos(): HasMany
+    {
+        return $this->hasMany(Articulo::class);
+    }
 
 }
