@@ -85,7 +85,7 @@
                                           <p class="card-text">De Simposios, Conferencias, Jornadas, Eventos de Investigación por los Institutos</p>
                                         </div>
                                         <div class="card-footer bg-transparent border-light">
-                                            <a name="" id="" class="btn btn-secondary" href="#" role="button">
+                                            <a name="" id="" class="btn btn-secondary" href="{{route('organizadores.index')}}" role="button">
                                                 Ingresar
                                             </a>
                                         </div>

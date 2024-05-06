@@ -7,6 +7,7 @@ use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\TesisController;
 use App\Http\Controllers\AporteController;
+use App\Http\Controllers\OrganizadorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -58,6 +59,13 @@ Route::middleware('auth')->group(function () {
     Route::post('aportes/store',[AporteController::class,'store'])->name('aportes.store');
     Route::get('aportes/show/{id}',[AporteController::class,'show'])->name('aportes.show');
     Route::delete('aportes/delete/{id}',[AporteController::class,'destroy'])->name('aportes.destroy');
+
+    #*********************Organizadores*****************************
+    Route::get('organizadores/index',[OrganizadorController::class,'index'])->name('organizadores.index');
+    Route::get('organizadores/create',[OrganizadorController::class,'create'])->name('organizadores.create');
+    Route::post('organizadores/store',[OrganizadorController::class,'store'])->name('organizadores.store');
+    Route::get('organizadores/show/{id}',[OrganizadorController::class,'show'])->name('organizadores.show');
+    Route::delete('organizadores/delete/{id}',[OrganizadorController::class,'destroy'])->name('organizadores.destroy');
 
 });
 

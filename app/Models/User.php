@@ -66,5 +66,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Aporte::class);
     }
+    public function organizadores(): HasMany
+    {
+        return $this->hasMany(Organizador::class);
+    }
+    
 
 }
