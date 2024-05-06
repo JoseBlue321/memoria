@@ -115,7 +115,7 @@
                                                   <button type="reset" class="btn btn-secondary">
                                                       Limpiar
                                                   </button>
-                                                  <a class="btn btn-danger" href="#" role="button">Cancelar</a>
+                                                  <a class="btn btn-danger" href="{{route('libros.index')}}" role="button">Cancelar</a>
                                                 </div>
                                             </form>
                                         </div>
