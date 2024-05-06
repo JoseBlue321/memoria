@@ -43,10 +43,10 @@
                                     <div class="card text-dark bg-light mb-3" style="height: 200px">
                                         <div class="card-body">
                                           <h5 class="card-title">Libros</h5>
-                                          <p class="card-text">Todo tipo de libros publicado</p>
+                                          <p class="card-text">Todo tipo de libros publicados</p>
                                         </div>
                                         <div class="card-footer bg-transparent border-light">
-                                            <a name="" id="" class="btn btn-secondary" href="#" role="button">
+                                            <a name="" id="" class="btn btn-secondary" href="{{route('libros.index')}}" role="button">
                                                 Ingresar
                                             </a>
                                         </div>

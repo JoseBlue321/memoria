@@ -4,6 +4,7 @@ use App\Http\Controllers\MemoriaController;
 use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\LibroController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,9 +34,14 @@ Route::middleware('auth')->group(function () {
     Route::get('articulos/create',[ArticuloController::class,'create'])->name('articulo.create');
     Route::post('articulos/store',[ArticuloController::class,'store'])->name('articulo.store');
     Route::get('articulos/show/{id}',[ArticuloController::class,'show'])->name('articulo.show');
-    Route::get('articulos/edit/{id}',[ArticuloController::class,'edit'])->name('articulo.edit');
-    Route::put('articulos/update/{id}',[ArticuloController::class,'update'])->name('articulo.update');
     Route::delete('articulos/delete/{id}',[ArticuloController::class,'destroy'])->name('articulo.destroy');
+
+    #*********************Libros*****************************
+    Route::get('libros/index',[LibroController::class,'index'])->name('libros.index');
+    Route::get('libros/create',[LibroController::class,'create'])->name('libros.create');
+    Route::post('libros/store',[LibroController::class,'store'])->name('libros.store');
+    Route::get('libros/show/{id}',[LibroController::class,'show'])->name('libros.show');
+    Route::delete('libros/delete/{id}',[LibroController::class,'destroy'])->name('libros.destroy');
 
 
 

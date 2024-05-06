@@ -36,7 +36,7 @@ class ArticuloController extends Controller
         $file = $request->file('articulo_pdf');
         if ($file != null) {
             $fileName = $file->getClientOriginalName();
-            $filePath = $file->storeAs('articulos', $fileName, 'public'); // Almacena en la carpeta /storage/app/public/articulos   
+            $filePath = $file->storeAs('articulos/'.$request->input('user_id'),$fileName, 'public'); // Almacena en la carpeta /storage/app/public/articulos   
         }else {
             $filePath = '';
         }
@@ -60,7 +60,9 @@ class ArticuloController extends Controller
         $articulo = Articulo::findOrFail($id);
         $pdf = $articulo->archivo_articulo;
         $filePath = storage_path('app/public/' . $pdf);
-        return $filePath;
+        return view('memorias.articulos.show',[
+            'articulo'=>$articulo,
+        ]);
     }
 
     public function edit(string $id)
@@ -75,6 +77,8 @@ class ArticuloController extends Controller
 
     public function destroy(string $id)
     {
-        //
+        $articulo = Articulo::findOrFail($id);
+        $articulo->delete();
+        return redirect()->route('articulo.index')->with('exitoso', 'Registro eliminado correctamente.');
     }
 }

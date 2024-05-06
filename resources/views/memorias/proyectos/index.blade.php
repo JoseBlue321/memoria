@@ -35,7 +35,9 @@
                                                     <td>{{$proyecto->tipo}}</td>
                                                     <td>{{$proyecto->estado}}</td>
                                                     <td><a class="btn btn-info" href="{{route('proyectos.show',$proyecto->id)}}" role="button">Ver</a></td>
+                                                    <!--
                                                     <td><a class="btn btn-success" href="{{route('proyectos.edit',$proyecto->id)}}" role="button">Editar</a></td>
+                                                    -->
                                                     <td>
                                                         <form action="{{ route('proyectos.destroy',$proyecto->id)}}" method="POST">
                                                             @csrf

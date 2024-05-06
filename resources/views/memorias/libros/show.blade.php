@@ -17,20 +17,18 @@
                                   <!--here content-->
                                   <div class="card">
                                     <div class="card-body">
-                                      <h5 class="card-title">Titulo: {{$articulo->titulo}}</h5>
+                                      <h5 class="card-title">Titulo del libro: {{$libro->titulo}}</h5>
                                       <p class="card-text">
-                                        <b>Código: </b>{{$articulo->id}} <br>
-                                        <b>Nombre de la Revista: </b>{{$articulo->nombre}} <br>
-                                        <b>Autores: </b>{{$articulo->autores}} <br>
-                                        <b>Doi: </b>{{$articulo->doi}} <br>
-                                        <b>Enlace del Articulo: </b>{{$articulo->enlace}} <br>
-                                        <b>Como citar el articulo vancouver: </b>{{$articulo->vancouver}} <br>
-                                        <b>Fecha de Registro: </b>{{$articulo->created_at}} <br>
+                                        <b>Código: </b>{{$libro->id}} <br>
+                                        <b>Editorial: </b>{{$libro->editorial}} <br>
+                                        <b>Autores: </b>{{$libro->autores}} <br>
+                                        <b>Fecha de Publicación: </b>{{$libro->fecha_publicacion}} <br>
+                                        <b>Enlace del libro: </b>{{$libro->enlace_libro}} <br>
+                                        <b>ISBN: </b>{{$libro->isbn}} <br>
+                                        <b>Deposito legal: </b>{{$libro->deposito_legal}} <br>
+                                        <b>Fecha de Registro: </b>{{$libro->created_at}} <br>
                                       </p>
-                                      <!--
-                                      <iframe src="{{ $articulo->archivo_articulo }}" width="100%" height="600px"></iframe>
-                                      -->
-                                      <a href="{{route('articulo.index')}}" class="btn btn-danger">Salir</a>
+                                      <a href="{{route('libros.index')}}" class="btn btn-danger">Salir</a>
                                     </div>
                                   </div>
                               </div>

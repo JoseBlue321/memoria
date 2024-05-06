@@ -15,32 +15,34 @@
                             <div class="row justify-content-center align-items-center g-2">
                                 <div class="col-md-12">
                                   <!--here content-->
-                                  <h3>Articulos</h3>
+                                  <h3>Libros</h3>
                                   <div class="table-responsive">
-                                      <table id="proyectos" class="table table-hover">
+                                      <table class="table table-hover">
                                           <thead class="table-primary">
                                               <th>codigo</th>
-                                              <th>titulo del articulo</th>
-                                              <th>nombre de la revista</th>
+                                              <th>titulo del libro</th>
+                                              <th>editorial</th>
+                                              <th>Autores</th>
                                               <th>archivo</th>
                                               <th>Ver</th>
                                               <th>Eliminar</th>
                                           </thead>
                                           <tbody>
-                                              @foreach ($articulos as $articulo)
+                                              @foreach ($libros as $libro)
                                                   <tr>
-                                                      <td>{{$articulo->id}}</td>
-                                                      <td>{{$articulo->titulo}}</td>
-                                                      <td>{{$articulo->nombre}}</td>
+                                                      <td>{{$libro->id}}</td>
+                                                      <td>{{$libro->titulo}}</td>
+                                                      <td>{{$libro->editorial}}</td>
+                                                      <td>{{$libro->autores}}</td>
                                                       <td>
-                                                        @if ($articulo->archivo_articulo != null)
+                                                        @if ($libro->archivo_libro != null)
                                                         <i class="far fa-file-pdf" style="font-size: 24px; color: red;"></i> 
-                                                        {{$articulo->archivo_articulo}}
+                                                        {{$libro->archivo_libro}}
                                                         @endif
                                                     </td>
-                                                      <td><a class="btn btn-info" href="{{route('articulo.show',$articulo->id)}}" role="button">Ver</a></td>
+                                                      <td><a class="btn btn-info" href="{{route('libros.show',$libro->id)}}" role="button">Ver</a></td>
                                                       <td>
-                                                          <form action="{{ route('articulo.destroy',$articulo->id)}}" method="POST">
+                                                          <form action="{{ route('libros.destroy',$libro->id)}}" method="POST">
                                                               @csrf
                                                               @method('DELETE')
                                                               <button type="submit" class="btn btn-danger">Eliminar</button>
@@ -51,7 +53,7 @@
                                           </tbody>
                                       </table>
                                   </div>
-                                  <a class="btn btn-primary" href="{{route('articulo.create')}}" role="button">Registrar Nuevo Articulo</a>
+                                  <a class="btn btn-primary" href="{{route('libros.create')}}" role="button">Registrar Nuevo Libro</a>
                               </div>
                             </div>
                         </div>

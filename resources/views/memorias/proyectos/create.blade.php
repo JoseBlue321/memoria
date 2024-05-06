@@ -25,61 +25,6 @@
                                                 @csrf
                                                 <input type="hidden" name="user_id" value="{{auth()->user()->id}}">
                 
-                                              <div class="card border-info mb-3" >
-                                                <div class="card-header"><b>Información Procedencia</b></div>
-                                                <div class="card-body">
-                                                  <div class="row align-items-start justify-content-start">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                          <label for="">Resolución HCF </label>
-                                                          <input type="number" name="resolucion" id="" class="form-control" placeholder="" aria-describedby="helpId">
-                                                          <small id="helpId" class="text-muted">Si corresponde (No obligatorio)</small>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row align-items-start justify-content-start">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                          <label for="">Carrera</label>
-                                                          <select class="form-control" name="carrera" id="">
-                                                            <option>Medicina</option>
-                                                            <option>Enfermeria</option>
-                                                            <option>Nutrición y Dietética</option>
-                                                            <option>Tecnología Médica</option>
-                                                            <option>Programa de Fonoaudiología</option>
-                                                            <option>Programa de Terapia Ocupacional</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                          <label for="">Departamento</label>
-                                                          <select class="form-control" name="departamento" id="">
-                                                            <option>Medicina y Salud Mental</option>
-                                                            <option>Ciencias Funcionales</option>
-                                                            <option>Ciencias Morfológicas</option>
-                                                            <option>Cirugia</option>
-                                                            <option>Salud Pública</option>
-                                                            <option>Patología</option>
-                                                            <option>Materno Infantil</option>
-                                                            <option>Ninguno</option>
-                                                          </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                      <div class="form-group">
-                                                        <label for="">Instituto</label>
-                                                        <select class="form-control" name="instituto" id="">
-                                                          <option>Genética</option>
-                                                          <option>IINSAD</option>
-                                                          <option>IBBA</option>
-                                                        </select>
-                                                      </div>
-                                                  </div>
-                                                </div>
-                                                </div>
-                                              </div>
-                
                                               <div class="card border-success mb-3" >
                                                 <div class="card-header"><b>Información Proyecto</b></div>
                                                 <div class="card-body">
@@ -98,18 +43,57 @@
                                                         <div class="form-group">
                                                           <label for="">Descripción del Proyecto</label>
                                                           <textarea class="form-control" name="descripcion" id="" rows="3"></textarea>
+                                                          <small id="helpId" class="text-muted">Max: 100 palabras</small>
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="row align-items-start justify-content-start">
+                                                  <div class="col-md-6">
+                                                      <br>
+                                                      <div class="form-group">
+                                                        <label for="">Resolución HCF </label>
+                                                        <input type="number" name="resolucion" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                                                        <small id="helpId" class="text-muted">Si corresponde (No obligatorio)</small>
+                                                      </div>
+                                                  </div>
+
+                                                  <div class="col-md-6">
+                                                    <br>
+                                                      <div class="form-group">
+                                                        <label for="">Carrera / Departamento / Instituto</label>
+                                                        <select class="form-control" name="carrera" id="">
+                                                          <option>Carrera: Medicina</option>
+                                                          <option>Carrera: Enfermeria</option>
+                                                          <option>Carrera: Nutrición y Dietética</option>
+                                                          <option>Carrera: Tecnología Médica</option>
+                                                          <option>Programa de Fonoaudiología</option>
+                                                          <option>Programa de Terapia Ocupacional</option>
+                                                          <option>Departamento: Medicina y Salud Mental</option>
+                                                          <option>Departamento: Ciencias Funcionales</option>
+                                                          <option>Departamento: Ciencias Morfológicas</option>
+                                                          <option>Departamento: Cirugia</option>
+                                                          <option>Departamento: Salud Pública</option>
+                                                          <option>Departamento: Patología</option>
+                                                          <option>Departamento: Materno Infantil</option>
+                                                          <option>Instituto: Genética</option>
+                                                          <option>Instituto: IINSAD</option>
+                                                          <option>Instituto: IBBA</option>
+                                                        </select>
+                                                      </div>
+                                                </div>
+                                                </div>
+
+
                                                 <div class="row align-items-start justify-content-start">
                                                     <div class="col-md-12">
                                                         <br>
                                                         <div class="form-group">
                                                           <label for="">Tipo de proyecto </label>
                                                           <select class="form-control" name="tipo" id="">
-                                                            <option>interacción social</option>
-                                                            <option>investigación</option>
-                                                            <option>extensión universitaria</option>
+                                                            <option>Interacción Social</option>
+                                                            <option>Investigación</option>
+                                                            <option>Extensión Universitaria</option>
                                                           </select>
                                                         </div>
                                                     </div>
@@ -119,7 +103,7 @@
                                                     <br>
                                                     <div class="form-group">
                                                       <label for="">Investigadores Principales y Colaboradores</label>
-                                                      <textarea class="form-control" name="investigadores" id="" rows="3"></textarea>
+                                                      <textarea class="form-control" name="investigadores" id="" rows="3" placeholder="- Apellido, Nombre, Instancia o unidad que pertenece"></textarea>
                                                     </div>
                                                   </div>
                                               </div>
@@ -128,14 +112,14 @@
                                                     <div class="col-md-6">
                                                         <br>
                                                         <div class="form-group">
-                                                          <label for="">Fecha de Inicio</label>
+                                                          <label for="">Fecha de Inicio - Proyecto</label>
                                                           <input type="date" name="fecha_inicio" id="" class="form-control" placeholder="" aria-describedby="helpId">
                                                         </div>  
                                                     </div>
                                                     <div class="col-md-6">
                                                         <br>
                                                         <div class="form-group">
-                                                          <label for="">Fecha de Finalización</label>
+                                                          <label for="">Fecha de Finalización - Proyecto</label>
                                                           <input type="date" name="fecha_finalizacion" id="" class="form-control" placeholder="" aria-describedby="helpId">
                                                         </div> 
                                                     </div>
@@ -188,7 +172,6 @@
                                                         <div class="form-group">
                                                             <label for="">Estado del Proyecto</label>
                                                             <select class="form-control" name="estado" id="">
-                                                              <option>En proceso de aprobación</option>
                                                               <option>En ejecucion</option>
                                                               <option>Concluido</option>
                                                             </select>

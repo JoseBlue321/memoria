@@ -21,9 +21,7 @@
                                       <p class="card-text">
                                         <b>Código: </b>{{$proyecto->id}} <br>
                                         <b>Resolucion: </b>{{$proyecto->resolucion}} <br>
-                                        <b>Carrera: </b>{{$proyecto->carrera}} <br>
-                                        <b>Departamento: </b>{{$proyecto->departamento}} <br>
-                                        <b>Instituto: </b>{{$proyecto->instituto}} <br>
+                                        <b>Carrera/Departamento/Instituto: </b>{{$proyecto->carrera}} <br>
                                         <b>Descripción: </b>{{$proyecto->descripcion}} <br>
                                         <b>Tipo: </b>{{$proyecto->tipo}} <br>
                                         <b>Investigadores: </b>{{$proyecto->investigadores}} <br>
