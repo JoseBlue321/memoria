@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+
+    public function up(): void
+    {
+        Schema::create('tesis', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('titulo');
+            $table->text('autores')->nullable();
+            $table->string('tutor')->nullable();
+            $table->text('resumen')->nullable();
+            $table->string('palabras_clave')->nullable();
+            $table->string('titulo_optar')->nullable();
+            $table->date('fecha_defensa')->nullable();
+            $table->string('archivo_tesis')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('tesis');
+    }
+};

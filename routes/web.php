@@ -5,6 +5,7 @@ use App\Http\Controllers\ProyectoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\LibroController;
+use App\Http\Controllers\TesisController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -42,6 +43,13 @@ Route::middleware('auth')->group(function () {
     Route::post('libros/store',[LibroController::class,'store'])->name('libros.store');
     Route::get('libros/show/{id}',[LibroController::class,'show'])->name('libros.show');
     Route::delete('libros/delete/{id}',[LibroController::class,'destroy'])->name('libros.destroy');
+
+    #*********************Tesis*****************************
+    Route::get('tesis/index',[TesisController::class,'index'])->name('tesis.index');
+    Route::get('tesis/create',[TesisController::class,'create'])->name('tesis.create');
+    Route::post('tesis/store',[TesisController::class,'store'])->name('tesis.store');
+    Route::get('tesis/show/{id}',[TesisController::class,'show'])->name('tesis.show');
+    Route::delete('tesis/delete/{id}',[TesisController::class,'destroy'])->name('tesis.destroy');
 
 });
 
