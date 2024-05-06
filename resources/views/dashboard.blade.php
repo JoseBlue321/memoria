@@ -98,7 +98,7 @@
                                           <p class="card-text"></p>
                                         </div>
                                         <div class="card-footer bg-transparent border-light">
-                                            <a name="" id="" class="btn btn-secondary" href="#" role="button">
+                                            <a name="" id="" class="btn btn-secondary" href="{{route('patentes.index')}}" role="button">
                                                 Ingresar
                                             </a>
                                         </div>

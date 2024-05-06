@@ -8,6 +8,7 @@ use App\Http\Controllers\LibroController;
 use App\Http\Controllers\TesisController;
 use App\Http\Controllers\AporteController;
 use App\Http\Controllers\OrganizadorController;
+use App\Http\Controllers\PatenteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -66,6 +67,13 @@ Route::middleware('auth')->group(function () {
     Route::post('organizadores/store',[OrganizadorController::class,'store'])->name('organizadores.store');
     Route::get('organizadores/show/{id}',[OrganizadorController::class,'show'])->name('organizadores.show');
     Route::delete('organizadores/delete/{id}',[OrganizadorController::class,'destroy'])->name('organizadores.destroy');
+
+    #*********************Patentes*****************************
+    Route::get('patentes/index',[PatenteController::class,'index'])->name('patentes.index');
+    Route::get('patentes/create',[PatenteController::class,'create'])->name('patentes.create');
+    Route::post('patentes/store',[PatenteController::class,'store'])->name('patentes.store');
+    Route::get('patentes/show/{id}',[PatenteController::class,'show'])->name('patentes.show');
+    Route::delete('patentes/delete/{id}',[PatenteController::class,'destroy'])->name('patentes.destroy');
 
 });
 

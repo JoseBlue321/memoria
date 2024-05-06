@@ -70,6 +70,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Organizador::class);
     }
+    public function patentes(): HasMany
+    {
+        return $this->hasMany(Patente::class);
+    }
     
 
 }

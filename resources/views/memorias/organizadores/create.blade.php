@@ -42,7 +42,7 @@
                                                         <br>
                                                         <div class="form-group">
                                                           <label for="">Organizador(es) del evento</label>
-                                                          <textarea class="form-control" name="organizadores" id="" rows="3" placeholder="- Apellidos, Nombres, Instancio o uni dad a la que pertenece"></textarea>
+                                                          <textarea class="form-control" name="organizadores" id="" rows="3" placeholder="- Apellidos, Nombres, Instancio o unidad a la que pertenece"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
