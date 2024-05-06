@@ -62,5 +62,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Tesis::class);
     }
+    public function aportes(): HasMany
+    {
+        return $this->hasMany(Aporte::class);
+    }
 
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticuloController;
 use App\Http\Controllers\LibroController;
 use App\Http\Controllers\TesisController;
+use App\Http\Controllers\AporteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -50,6 +51,13 @@ Route::middleware('auth')->group(function () {
     Route::post('tesis/store',[TesisController::class,'store'])->name('tesis.store');
     Route::get('tesis/show/{id}',[TesisController::class,'show'])->name('tesis.show');
     Route::delete('tesis/delete/{id}',[TesisController::class,'destroy'])->name('tesis.destroy');
+
+    #*********************Aportes*****************************
+    Route::get('aportes/index',[AporteController::class,'index'])->name('aportes.index');
+    Route::get('aportes/create',[AporteController::class,'create'])->name('aportes.create');
+    Route::post('aportes/store',[AporteController::class,'store'])->name('aportes.store');
+    Route::get('aportes/show/{id}',[AporteController::class,'show'])->name('aportes.show');
+    Route::delete('aportes/delete/{id}',[AporteController::class,'destroy'])->name('aportes.destroy');
 
 });
 
