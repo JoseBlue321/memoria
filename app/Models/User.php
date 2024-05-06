@@ -74,6 +74,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(Patente::class);
     }
+    public function otros(): HasMany
+    {
+        return $this->hasMany(Otro::class);
+    }
     
 
 }

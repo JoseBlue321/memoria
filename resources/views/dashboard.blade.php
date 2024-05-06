@@ -65,7 +65,7 @@
                                         </div>
                                       </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card text-dark bg-light mb-3" style="height: 200px">
                                         <div class="card-body">
                                           <h5 class="card-title">Aportes</h5>
@@ -78,7 +78,7 @@
                                         </div>
                                       </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card text-dark bg-light mb-3" style="height: 200px">
                                         <div class="card-body">
                                           <h5 class="card-title">Organizador(a)</h5>
@@ -91,7 +91,7 @@
                                         </div>
                                       </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="card text-dark bg-light mb-3" style="height: 200px">
                                         <div class="card-body">
                                           <h5 class="card-title">Patentes</h5>
@@ -99,6 +99,19 @@
                                         </div>
                                         <div class="card-footer bg-transparent border-light">
                                             <a name="" id="" class="btn btn-secondary" href="{{route('patentes.index')}}" role="button">
+                                                Ingresar
+                                            </a>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card text-dark bg-light mb-3" style="height: 200px">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Otras Publicaciones</h5>
+                                          <p class="card-text"></p>
+                                        </div>
+                                        <div class="card-footer bg-transparent border-light">
+                                            <a name="" id="" class="btn btn-secondary" href="{{route('otros.index')}}" role="button">
                                                 Ingresar
                                             </a>
                                         </div>

@@ -9,6 +9,7 @@ use App\Http\Controllers\TesisController;
 use App\Http\Controllers\AporteController;
 use App\Http\Controllers\OrganizadorController;
 use App\Http\Controllers\PatenteController;
+use App\Http\Controllers\OtroController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -74,6 +75,13 @@ Route::middleware('auth')->group(function () {
     Route::post('patentes/store',[PatenteController::class,'store'])->name('patentes.store');
     Route::get('patentes/show/{id}',[PatenteController::class,'show'])->name('patentes.show');
     Route::delete('patentes/delete/{id}',[PatenteController::class,'destroy'])->name('patentes.destroy');
+
+    #*********************Otros*****************************
+    Route::get('otros/index',[OtroController::class,'index'])->name('otros.index');
+    Route::get('otros/create',[OtroController::class,'create'])->name('otros.create');
+    Route::post('otros/store',[OtroController::class,'store'])->name('otros.store');
+    Route::get('otros/show/{id}',[OtroController::class,'show'])->name('otros.show');
+    Route::delete('otros/delete/{id}',[OtroController::class,'destroy'])->name('otros.destroy');
 
 });
 

@@ -24,7 +24,6 @@
                                             <th>tipo</th>
                                             <th>Estado</th>
                                             <th>Ver</th>
-                                            <th>Editar</th>
                                             <th>Eliminar</th>
                                         </thead>
                                         <tbody>
