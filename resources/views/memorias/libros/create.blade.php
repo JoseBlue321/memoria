@@ -51,7 +51,7 @@
                                                         <br>
                                                         <div class="form-group">
                                                           <label for="">Autores que colaboraron en la elaboración del libro</label>
-                                                          <textarea class="form-control" name="autores" id="" rows="3" placeholder="- Apellidos, Nombres, Instancio o unidad a la que pertenece"></textarea>
+                                                          <textarea class="form-control" name="autores" id="" rows="3" placeholder="- Apellidos, Nombres, Instancio o unidad a la que pertenece, tipo de participacion (Autor Principal, editor, Autor de capitulo ¿Qué capitulo?)"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
