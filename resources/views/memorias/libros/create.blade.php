@@ -16,7 +16,7 @@
                             <div class="col-md-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="card-title text-center">Libros</h4>
+                                        <h4 class="card-title text-center">Libros y Autores de Capítulos de Libros</h4>
                                         <p class="card-text"></p>
                                         <div class="container">
 

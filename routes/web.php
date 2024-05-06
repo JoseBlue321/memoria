@@ -43,16 +43,6 @@ Route::middleware('auth')->group(function () {
     Route::get('libros/show/{id}',[LibroController::class,'show'])->name('libros.show');
     Route::delete('libros/delete/{id}',[LibroController::class,'destroy'])->name('libros.destroy');
 
-
-
-
-
-    Route::get('memorias/articulos',[MemoriaController::class,'articulos'])->name('articulos.memorias');
-    Route::get('memorias/libros',[MemoriaController::class,'libros'])->name('libros.memorias');
-    Route::get('memorias/tesis',[MemoriaController::class,'tesis'])->name('tesis.memorias');
-    Route::get('memorias/aportes',[MemoriaController::class,'aportes'])->name('aportes.memorias');
-    Route::get('memorias/organizadores',[MemoriaController::class,'organizadores'])->name('organizadores.memorias');
-    Route::get('memorias/patentes',[MemoriaController::class,'patentes'])->name('patentes.memorias');
 });
 
 require __DIR__.'/auth.php';
