@@ -15,8 +15,28 @@
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('certificados')}}">Certificados</a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ route('memorias')}}">Memoria de Investigación</a>
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Recopilación de datos - Memoria de Investigación
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  @if (Route::has('login'))
+                  @auth
+                  <a class="dropdown-item" href="{{ url('/dashboard') }}">Dashboard</a>
+                  @else
+                  <li><a class="dropdown-item" href="{{ route('login') }}">Ingresar</a></li>
+                      @if (Route::has('register'))
+                      <li><a class="dropdown-item" href="{{ route('register') }}">Registrarse</a></li>
+                      @endif
+                  @endauth
+                  @endif
+                </li>
+              </ul>
+            </div>
+            
           </li>
         </ul>
       </div>

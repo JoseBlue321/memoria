@@ -10,12 +10,48 @@ use App\Http\Controllers\AporteController;
 use App\Http\Controllers\OrganizadorController;
 use App\Http\Controllers\PatenteController;
 use App\Http\Controllers\OtroController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CalificacionesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//0. ***********************VISTAS PRINCIPALES************************* */
+Route::get('/',[HomeController::class,'index'])->name('home');
+Route::get('calificaciones',[HomeController::class,'calificaciones'])->name('calificaciones');
+Route::get('certificado',[HomeController::class,'certificados'])->name('certificados');
+Route::get('memorias',[HomeController::class,'memorias'])->name('memorias');
 
+//1. ***********************CALIFICACIONES************************* */
+Route::post('persona',[CalificacionesController::class,'show'])->name('show.persona');
+//Route::get('persona/{id}',[PersonaController::class,'img'])->name('img.persona');
+//Route::get('solicitudes',[PersonaController::class,'solicitudes'])->name('solicitudes.persona');
+//Route::post('plantilla',[PersonaController::class,'plantilla'])->name('plantillas.persona');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1. ***************RECOPILACION DE DATOS - MEMORIA DE INVESTIGACION************ */
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
