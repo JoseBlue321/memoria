@@ -12,6 +12,7 @@ use App\Http\Controllers\PatenteController;
 use App\Http\Controllers\OtroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CalificacionesController;
+use App\Http\Controllers\PersonaController;
 use Illuminate\Support\Facades\Route;
 
 //0. ***********************VISTAS PRINCIPALES************************* */
@@ -22,9 +23,8 @@ Route::get('memorias',[HomeController::class,'memorias'])->name('memorias');
 
 //1. ***********************CALIFICACIONES************************* */
 Route::post('persona',[CalificacionesController::class,'show'])->name('show.persona');
-//Route::get('persona/{id}',[PersonaController::class,'img'])->name('img.persona');
-//Route::get('solicitudes',[PersonaController::class,'solicitudes'])->name('solicitudes.persona');
-//Route::post('plantilla',[PersonaController::class,'plantilla'])->name('plantillas.persona');
+Route::get('solicitudes',[PersonaController::class,'solicitudes'])->name('solicitudes.persona');
+Route::post('plantilla',[PersonaController::class,'plantilla'])->name('plantillas.persona');
 
 
 
