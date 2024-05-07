@@ -13,6 +13,8 @@ use App\Http\Controllers\OtroController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CalificacionesController;
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\EventoController;
+use App\Http\Controllers\ParticipanteController;
 use Illuminate\Support\Facades\Route;
 
 //0. ***********************VISTAS PRINCIPALES************************* */
@@ -26,32 +28,17 @@ Route::post('persona',[CalificacionesController::class,'show'])->name('show.pers
 Route::get('solicitudes',[PersonaController::class,'solicitudes'])->name('solicitudes.persona');
 Route::post('plantilla',[PersonaController::class,'plantilla'])->name('plantillas.persona');
 
+//2. ***********************CERTIFICADOS************************* */
+Route::get('evento/{id}',[EventoController::class,'show'])->name('show.evento'); //formulario de registro para ver los eventos
+Route::post('formulario',[ParticipanteController::class,'store'])->name('store.participante'); //registro del formulario de participacion
+Route::get('evento',[EventoController::class,'index'])->name('index.evento'); //login para descargar el certificado
+Route::post('participante',[EventoController::class,'verificacion'])->name('verificacion.evento');  //descarga del certificado
+Route::get('validacion',[EventoController::class,'validacion'])->name('validacion.evento');  //login de validacion
+Route::post('validacioncertificado',[EventoController::class,'VerificacionCertificado'])->name('verificacion.certificado'); //consulta de la validacion
+Route::get('historial',[EventoController::class,'historial'])->name('historial.evento');  //login de historial
+Route::post('verifiacionhistorial',[EventoController::class,'verificacionhistorial'])->name('verificacion.historial'); //consulta del historial
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//1. ***************RECOPILACION DE DATOS - MEMORIA DE INVESTIGACION************ */
+//3. ***************RECOPILACION DE DATOS - MEMORIA DE INVESTIGACION************ */
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

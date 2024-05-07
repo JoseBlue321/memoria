@@ -11,13 +11,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             CarreraSeeder::class,
             CursoSeeder::class,
-            //AsignaturaSeeder::class,
-            //ParcialSeeder::class,
-            //PersonaSeeder::class,
-            //EvaluacionSeeder::class,
-            //EventoSeeder::class,
-            //ParticipanteSeeder::class,
-            //SolicitudSeeder::class,
+            EventoSeeder::class,
+            ParticipanteSeeder::class,
         ]);
     }
 }
