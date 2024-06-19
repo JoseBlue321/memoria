@@ -12,6 +12,7 @@ class Articulo extends Model
     protected $fillable = [
         'user_id',
         'autores',
+        'carrera',
         'titulo',
         'nombre',
         'doi',

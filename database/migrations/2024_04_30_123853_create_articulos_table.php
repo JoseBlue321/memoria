@@ -13,6 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->text('autores')->nullable();
+            $table->string('carrera')->nullable();
             $table->string('titulo');
             $table->string('nombre');
             $table->string('doi')->nullable();

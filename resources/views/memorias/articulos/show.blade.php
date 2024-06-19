@@ -22,6 +22,7 @@
                                         <b>Código: </b>{{$articulo->id}} <br>
                                         <b>Nombre de la Revista: </b>{{$articulo->nombre}} <br>
                                         <b>Autores: </b>{{$articulo->autores}} <br>
+                                        <b>Carrera/Departamento/Instituto: </b>{{$articulo->carrera}} <br>
                                         <b>Doi: </b>{{$articulo->doi}} <br>
                                         <b>Enlace del Articulo: </b>{{$articulo->enlace}} <br>
                                         <b>Como citar el articulo vancouver: </b>{{$articulo->vancouver}} <br>

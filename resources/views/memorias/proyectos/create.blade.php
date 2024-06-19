@@ -208,5 +208,3 @@
     @include('partials.datatable')
     @include('partials.js')
   </x-app-layout>
-  
-  

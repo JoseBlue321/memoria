@@ -11,19 +11,6 @@
                     <div class="card-body">
                         <form action="{{route('verificacion.evento')}}" method="post">
                             @csrf
-                            <div class="mb-3">
-                                <label for="" class="form-label">Codigo del Evento</label>
-                                <input
-                                    type="number"
-                                    name="codigo"
-                                    id=""
-                                    class="form-control"
-                                    placeholder=""
-                                    aria-describedby="helpId"
-                                    required
-                                />
-                                <small id="helpId" class="text-muted">Ingrese el codigo del evento</small>
-                            </div>
 
                             <div class="mb-3">
                                 <label for="" class="form-label">Carnet</label>
@@ -36,7 +23,7 @@
                                     aria-describedby="helpId"
                                     required
                                 />
-                                <small id="helpId" class="text-muted">Ingrese su carnet de identidad</small>
+                                <small id="helpId" class="text-muted">Ingrese su carnet de identidad / DNI </small>
                             </div>
 
                             <button type="submit" class="btn btn-primary">

@@ -25,6 +25,7 @@ class ArticuloController extends Controller
         $request->validate([
             'user_id'=>'required',
             'autores'=>['nullable','string'],
+            'carreras'=>['nullable','string'],
             'titulo'=>['required','string'],
             'nombre'=>['required','string'],
             'doi'=>['nullable','string'],
@@ -44,6 +45,7 @@ class ArticuloController extends Controller
         Articulo::create([
             'user_id'=>$request->input('user_id'),
             'autores'=>$request->input('autores'),
+            'carrera'=>$request->input('carrera'),
             'titulo'=>$request->input('titulo'),
             'nombre'=>$request->input('nombre'),
             'doi'=>$request->input('doi'),
